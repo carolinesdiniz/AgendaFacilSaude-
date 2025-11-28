@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de Agendamento Médico CSD">
+    <title>CSD - Agenda Fácil Saúde +</title>
+    <link rel="icon" href="./images/agenda.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header role="banner">
+        <div class="container header-content">
+            <h1>CSD - Agenda Fácil Saúde<span>+</span></h1>
+            <p>Sistema de Agendamento Médico Profissional</p>
+        </div>
+    </header>
+
+    <main class="container main-grid">
+        
+        <section id="agendamento" aria-labelledby="titulo-novo">
+            <h2 id="titulo-novo">Novo Agendamento</h2>
+            
+            <form id="form-agenda">
+                <input type="hidden" id="id" name="id">
+
+                <div class="input-group">
+                    <label for="nome">Nome do Paciente:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Nome completo" required minlength="3" maxlength="100" pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+">
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required maxlength="100">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required minlength="15" maxlength="15">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, Número, Bairro" required minlength="5" maxlength="150">
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="tipo">Tipo de Compromisso:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="Consulta">Consulta Médica</option>
+                        <option value="Exame">Exame</option>
+                        <option value="Tratamento">Tratamento</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="obs">Observações:</label>
+                    <textarea id="obs" name="obs" rows="3" maxlength="200" placeholder="Histórico, alergias..."></textarea>
+                    <div class="char-counter"><span id="contador">0</span>/200</div>
+                </div>
+
+                <button type="submit" class="btn-primary" id="btn-salvar">Agendar Compromisso</button>
+                <button type="button" class="btn-secondary" id="btn-cancelar-edicao" style="display: none;">Cancelar Edição</button>
+            </form>
+        </section>
+
+        <section id="lista-compromissos" aria-labelledby="titulo-lista">
+            <h2 id="titulo-lista">Compromissos Agendados</h2>
+
+            <div class="filtros-container">
+                <input type="text" id="filtro-busca" placeholder="Buscar por nome...">
+                <select id="filtro-tipo">
+                    <option value="">Todos os Tipos</option>
+                    <option value="Consulta">Consulta</option>
+                    <option value="Exame">Exame</option>
+                    <option value="Tratamento">Tratamento</option>
+                </select>
+            </div>
+            
+            <div id="aviso-vazio" role="alert" class="alert-box">
+                <p>Nenhum compromisso encontrado.</p>
+            </div>
+
+            <ul id="lista-agenda" class="agenda-grid">
+                </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CSD - Agenda Fácil Saúde. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

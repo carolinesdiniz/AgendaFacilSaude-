@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #398985;    
+    --secondary-color: #176f68;   
+    --bg-color: #f0f7f4; 
+    --text-color: #252525;
+    --error-color: #e74c3c;
+    --success-color: #27ae60;
+    --white: #ffffff;
+    --radius: 8px;
+    --color-consulta: #76C893;
+    --color-exame: #52B69A;
+    --color-tratamento: #34A0A4;
+}
+
+html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+
+.container { width: 90%; margin: 0 auto; max-width: 1200px; }
+
+header { background-color: var(--primary-color); color: var(--white); padding: 20px 0; text-align: center; margin-bottom: 2rem; }
+header h1 span { color: #a6ffcb; }
+
+.main-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
+section { background-color: var(--white); padding: 1.5rem; border-radius: var(--radius); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+h2 { color: var(--primary-color); border-bottom: 2px solid var(--bg-color); padding-bottom: 10px; margin-bottom: 20px; }
+
+.input-group { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+input, select, textarea { width: 100%; padding: 10px; border: 2px solid #ccc; border-radius: 4px; transition: 0.3s; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary-color); }
+.form-row { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+.char-counter { font-size: 0.8rem; text-align: right; color: #777; margin-top: 4px; }
+
+.btn-primary, .btn-secondary { padding: 12px; width: 100%; border-radius: 4px; cursor: pointer; border: none; font-size: 1rem; margin-top: 10px; color: white; transition: 0.3s; }
+.btn-primary { background-color: var(--primary-color); }
+.btn-primary:hover { background-color: var(--secondary-color); }
+.btn-secondary { background-color: #95a5a6; }
+.btn-secondary:hover { background-color: #7f8c8d; }
+
+.filtros-container { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.filtros-container input, .filtros-container select { flex: 1; min-width: 150px; }
+
+.agenda-grid { list-style: none; display: grid; gap: 1rem; grid-template-columns: 1fr; }
+.agendamento-card {
+    background: #f8f9fa; padding: 1rem; border-radius: 4px;
+    border-left: 5px solid var(--primary-color);
+    display: flex; flex-direction: column; justify-content: space-between;
+    transition: transform 0.2s;
+}
+.agendamento-card:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+.border-Consulta { border-left-color: var(--color-consulta); }
+.border-Exame { border-left-color: var(--color-exame); }
+.border-Tratamento { border-left-color: var(--color-tratamento); }
+
+.card-actions { margin-top: 1rem; display: flex; gap: 10px; justify-content: flex-end; }
+.btn-acao { padding: 6px 12px; border: none; border-radius: 4px; cursor: pointer; color: white; }
+.btn-editar { background-color: #176f68; }
+.btn-excluir { background-color: #176f68; }
+
+#toast-container { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+.toast {
+    background-color: #333; color: white; padding: 15px 25px; margin-bottom: 10px;
+    border-radius: 4px; opacity: 0; transform: translateX(100%);
+    transition: all 0.5s ease; box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center;
+}
+.toast.show { opacity: 1; transform: translateX(0); }
+.toast.success { border-left: 5px solid var(--success-color); }
+.toast.error { border-left: 5px solid var(--error-color); }
+
+footer { text-align: center; padding: 2rem 0; margin-top: 3rem; border-top: 1px solid #ddd; }
+
+@media (min-width: 768px) {
+    .main-grid { grid-template-columns: 1fr 1.5fr; align-items: start; }
+    .form-row { grid-template-columns: 1fr 1fr; }
+}
+@media print {
+    header, footer, #agendamento, .filtros-container, .card-actions, #toast-container { display: none !important; }
+    .main-grid { display: block; }
+    .agendamento-card { break-inside: avoid; border: 1px solid #ccc; margin-bottom: 10px; box-shadow: none; }
+}
