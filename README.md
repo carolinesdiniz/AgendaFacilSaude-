@@ -7,9 +7,7 @@ desenvolvendo com HTML5, CSS3 e JavaScript, que permite agendamento de consultas
 exames e tratamentos de pacientes em clínicas ou hospitais.
 
 Informações do Aluno  
-
 Nome: Caroline Saraiva Diniz  
-
 Matrícula: 01813666  
 
 Curso: Análise e Desenvolvimento de Sistemas  
