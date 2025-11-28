@@ -1,16 +1,23 @@
 # Sistema de Agenda Médica
 
-Visão Geral
+Visão Geral  
+
 Este é um sistema completo de uma agenda médica para controle de compromissos, 
 desenvolvendo com HTML5, CSS3 e JavaScript, que permite agendamento de consultas, 
 exames e tratamentos de pacientes em clínicas ou hospitais.
 
-Informações do Aluno
-Nome: Caroline Saraiva Diniz
-Matrícula: 01813666
-Curso: Análise e Desenvolvimento de Sistemas
-Turno: Manhã
-Instituição: Centro Universitário Maurício de Nassau - Aguanambi
+Informações do Aluno  
+
+Nome: Caroline Saraiva Diniz  
+
+Matrícula: 01813666  
+
+Curso: Análise e Desenvolvimento de Sistemas  
+
+Turno: Manhã  
+
+Instituição: Centro Universitário Maurício de Nassau - Aguanambi  
+
 
 Estrutura do projeto
 index.html - Estrutura HTML principal com formulários.
