@@ -1,0 +1,117 @@
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 2rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 { font-size: 2rem; margin-bottom: 0; }
+.subtitle { font-size: 1rem; opacity: 0.95; }
+
+main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+section {
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--primary-light);
+    padding-bottom: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.appointment-card {
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    transition: var(--transition);
+    background-color: var(--bg-primary);
+    margin-bottom: 1rem;
+}
+
+.appointment-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.appointment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.appointment-title h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+}
+
+.appointment-type {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.type-consulta { background-color: #bee3f8; color: #2c5282; }
+.type-exame { background-color: #c6f6d5; color: #22543d; }
+.type-tratamento { background-color: #fed7d7; color: #742a2a; }
+
+.appointment-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.appointment-notes {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--primary-light);
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--text-primary);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: auto;
+}

@@ -1,0 +1,66 @@
+.cadastro-form {
+    max-width: 480px;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    margin-top: -0.75rem;
+}
+
+.input-with-toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-toggle input {
+    width: 100%;
+    padding-right: 2.75rem;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.password-strength-container {
+    margin-bottom: 1.25rem;
+}
+
+.strength-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+    font-weight: 500;
+}
+
+.strength-bar {
+    height: 6px;
+    background-color: var(--bg-tertiary);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.strength-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+#cadastro-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    min-height: 1.25rem;
+}
